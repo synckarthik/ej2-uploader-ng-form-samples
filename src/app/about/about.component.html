@@ -1,0 +1,39 @@
+<form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate> 
+  <div class="form-group">
+      <label for="timepicker" class="control-label">Uploader</label>
+      <ejs-uploader id="Uploader" name="upload" class="form-control" formControlName="upload" (selected) = "onFileSelect($event)"></ejs-uploader>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="ResetForm($event)">
+    Reset
+  </button>
+  <button type="submit" class="btn btn-primary">
+    Submit
+  </button>
+
+</form>
+
+<div id="details">
+  <pre>{{form.value | json}}</pre>
+  <pre>{{form.valid}}</pre>
+</div>
+
+
+<style>
+  .form-control {
+    border: none;
+    box-shadow: none;
+  }
+  
+  .form-horizontal {
+    margin-top: 80px;
+  }
+  
+  form {
+    height: auto;
+    width: 500px;
+    margin: 0 auto;
+  }
+  #details{
+    margin-top: 10px;
+  }
+</style>

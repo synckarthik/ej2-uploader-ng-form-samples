@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Template-driven forms</h2>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+
+    <div class="form-group">
+      <label for="fileName">Uploader</label>
+      <ejs-uploader id="Uploader" name="upload" class="form-control" (selected) = "onFileSelect($event)"
+        [(ngModel)] = "user.fileName" #userid  #userid="ngModel" required 
+      ></ejs-uploader>
+    </div>
+
+    <button type="submit" class="btn buttons btn-success">Submit</button>
+    <button type="reset" class="btn buttons btn-success">Reset</button>
+  </form>
+
+
+  <pre>userForm.value: {{userForm.value | json}}</pre>
+  <pre>userForm.valid: {{userForm.valid}}</pre>
+
+</div>
+
+<style>
+  form {
+    margin-top: 80px;
+  }
+</style>

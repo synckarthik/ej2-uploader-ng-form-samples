@@ -1,0 +1,213 @@
+<div class="content-wrapper">
+    <div class="contents">
+        <label> TimePicker feature matrix sample </label>
+        <ejs-datetimepicker id="timepicker" #timepick placeholder="Select a date" width="200px"></ejs-datetimepicker>
+    </div>
+</div>
+<div class="contents1">
+    <div class="span3">
+        EnableStrict Persistence
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="enablePersistence($event)"></ejs-checkbox>
+    </div>
+    <div class="span3">
+        EnableRTL
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="enableRTL($event)"></ejs-checkbox>
+    </div>
+    <div class="span3">
+        Enabled
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="enable($event)" checked="true"></ejs-checkbox>
+    </div>
+    <div class="span3">
+        ReadOnly
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="readOnly($event)"></ejs-checkbox>
+    </div>
+    <div class="span3">
+        showClearButton
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="showClearButton($event)" checked="true"></ejs-checkbox>
+    </div>
+    <div class="span3">
+        StrictMode
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="strictMode($event)"></ejs-checkbox>
+    </div>
+    <div class="span3">
+        floatLabelType
+    </div>
+    <div class="span3">
+        <ejs-dropdownlist id='float' [dataSource]='float' (change)="floatChange($event)" value="Never" placeholder="floatLabelType"
+            width="200px"></ejs-dropdownlist>
+    </div>
+    <div class="span3">
+        Formats
+    </div>
+    <div class="span3">
+        <ejs-dropdownlist id='format' [dataSource]='format' (change)="formatChange($event)" value="null" placeholder="Formats" width="200px"></ejs-dropdownlist>
+    </div>
+    <div class="span3">
+        Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="value" name="value" (focusout)="onValueFocusout($event)" />
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="value">Value</label>
+        </div>
+    </div>
+    <div class="span3">
+        Min Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="min" name="min" (focusout)="onMinFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="min">Min Value</label>
+        </div>
+    </div>
+    <div class="span3">
+        Max Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="max" name="max" (focusout)="onMaxFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="max">max Value</label>
+        </div>
+    </div>
+    
+    <div class="span3">
+        Width string Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="width" name="width" (focusout)="onStringFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="width">Width String Value</label>
+        </div>
+    </div>
+    <div class="span3">
+        Width number Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="widthstring" name="widthstring" (focusout)="onNumberFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="widthstring">Width number Value</label>
+        </div>
+    </div>
+    <div class="span3">
+        Z-index Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="Zindex" name="Zindex" (focusout)="onIndexFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="Zindex">Z-index Value</label>
+        </div>
+    </div>
+    
+    <div class="span3">
+        Placeholder Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="placeholder" name="placeholder" (focusout)="onPlaceHolderFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="placeholder">PlaceHolder Value</label>
+        </div>
+    </div>
+    <div class="span3">
+        cssClass Value
+    </div>
+    <div class="span3">
+        <div class="e-float-input" style="width: 200px;">
+            <input type="text" id="cssClass" name="cssClass" (focusout)="oncssClassFocusout($event)"/>
+            <span class="e-float-line"></span>
+            <label class="e-float-text" for="cssClass">cssClass Value</label>
+        </div>
+    </div>
+   <div>
+        Methods:
+        <div>
+            <ejs-checkbox label='Show/Hide' (change)="showHide($event)"></ejs-checkbox>
+
+            <button id="destroy" Class="e-control e-btn" (click)="timeDestroy($event)">Destroy</button>
+
+            <button id="focusIn" Class="e-control e-btn" (click)="timeFocs($event)">FocusIn</button>
+
+            <button id="focusOut" Class="e-control e-btn" (click)="timeBlur($event)">Blur</button>
+
+            <button id="getPersistData" Class="e-control e-btn" (click)="GetPesistData($event)">GetPesistData</button>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .content-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+
+    #container {
+        width: 100%;
+        height: 60%;
+    }
+
+    .contents {
+        width: 30%;
+        float: left;
+        height: auto;
+    }
+
+    .contents1 {
+        background-color: whitesmoke;
+        width: 68%;
+        float: right;
+        border-left: 1px solid grey;
+        border-bottom: 1px solid grey;
+        height: auto;
+        padding: 20px 0px 20px 20px;
+
+    }
+
+    .e-checkbox {
+        position: relative !important;
+    }
+
+    .control h3 {
+        text-align: center;
+        padding: 80px 0px 0px 20px;
+    }
+
+    .control b {
+        text-align: center;
+        padding-left: 80px;
+    }
+
+    .span3 {
+        width: 25%;
+        float: left;
+        align-content: center;
+        padding-bottom: 10px;
+    }
+
+    input[type='text'] {
+        width: 140px;
+    }
+
+    .e-dropdownlist {
+        width: 200px;
+    }
+</style>

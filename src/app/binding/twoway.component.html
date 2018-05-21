@@ -1,0 +1,77 @@
+<div class="content-wrapper">
+    <div><label> datetimepicker Two-Way binding sample </label></div>
+    <div class="contents">
+        <ejs-datetimepicker id="datetimepicker1" placeholder="Select a Date" #datetime1 [(value)]="value" width="200px"></ejs-datetimepicker>
+    </div>
+    <div class="contents">
+        <ejs-datetimepicker id="datetimepicker2" placeholder="Select a Date" #datetime2 [(value)]="value" width="200px"></ejs-datetimepicker>
+    </div>
+    <div class="contents">
+        <input [(ngModel)]="value" width="200px" />
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div><label> DatePicker Two-Way binding sample </label></div>
+    <div class="contents">
+        <ejs-datepicker id="datetimepicker3" placeholder="Select a Date" #date1 [(value)]="value" width="200px"></ejs-datepicker>
+    </div>
+    <div class="contents">
+        <ejs-datepicker id="datetimepicker4" placeholder="Select a Date" #date2 [(value)]="value" width="200px"></ejs-datepicker>
+    </div>
+   
+</div>
+
+<div class="content-wrapper">
+    <div><label> TimePicker Two-Way binding sample </label></div>
+    <div class="contents">
+        <ejs-timepicker id="datetimepicker5" placeholder="Select a Time" #time1 [(value)]="value" width="200px"></ejs-timepicker>
+    </div>
+    <div class="contents">
+        <ejs-timepicker id="datetimepicker6" placeholder="Select a Time" #time2 [(value)]="value" width="200px"></ejs-timepicker>
+    </div>
+   
+</div>
+
+<div class="content-wrapper">
+    <div><label> Calendar Two-Way binding sample </label></div>
+    <div class="contents">
+        <ejs-calendar id="datetimepicker7"  #cal1 [(value)]="value" ></ejs-calendar>
+    </div>
+    <div class="contents">
+        <ejs-calendar id="datetimepicker8"  #cal2 [(value)]="value" ></ejs-calendar>
+    </div>
+    
+</div>
+
+<div class="span3">
+        StrictMode
+    </div>
+    <div class="span3">
+        <ejs-checkbox (change)="strictMode($event)"></ejs-checkbox>
+    </div>
+
+
+<style>
+    .content-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+    
+    #container {
+        width: 100%;
+        height: 60%;
+    }
+    
+    .contents {
+        width: 20%;
+        float: left;
+        height: auto;
+    }    
+    
+    input[type='text'] {
+        width: 140px;
+    }
+    
+</style>
