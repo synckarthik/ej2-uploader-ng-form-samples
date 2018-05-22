@@ -17,17 +17,18 @@ class User {
 })
 
 export class SampleComponent {
-    
+  public serverUrl: any = {
+    saveUrl: 'http://localhost:50272/api/uploadbox/Save',
+    removeUrl: 'http://localhost:50272/api/uploadbox/Remove'
+  }
    user: User;
+  
   ngOnInit() {
     this.user = new User(null);
   }
 
-  onSubmit(userForm) {
-    if(userForm.valid){
-      alert("submitted")
-    }
-    else alert ("form is invalid")
+  onFormSubmit() {
+    debugger;
   }
 
   onFileSelect(args: any) {
