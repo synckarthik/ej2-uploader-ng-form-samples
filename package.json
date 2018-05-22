@@ -29,6 +29,7 @@
     "@syncfusion/ej2-ng-buttons": "^16.1.37",
     "@syncfusion/ej2-ng-calendars": "^16.1.38",
     "@syncfusion/ej2-ng-dropdowns": "*",
+	"@syncfusion/ej2-ng-inputs": "*",
     "angular-in-memory-web-api": "^0.3.1",
     "core-js": "^2.4.1",
     "ie-shim": "^0.1.0",
