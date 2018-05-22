@@ -20,9 +20,9 @@ export class AboutComponent {
     else alert("Form is invalid");
   }
 
-  ResetForm(args: any){
-    this.form.reset();
-  }
+  // ResetForm(args: any){
+  //   this.form.reset();
+  // }
 
   onFileSelect(args: any) {
     this.form.patchValue({

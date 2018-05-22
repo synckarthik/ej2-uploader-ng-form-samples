@@ -1,15 +1,15 @@
-<form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate> 
+<form class="form-horizontal" [formGroup]="form" method="POST" novalidate action="http://localhost:50272/api/uploadbox/Save">
   <div class="form-group">
-      <label for="timepicker" class="control-label">Uploader</label>
-      <ejs-uploader id="Uploader" name="upload" class="form-control" formControlName="upload" (selected) = "onFileSelect($event)"></ejs-uploader>
+      <label for="upload" class="control-label">Uploader</label>
+      <input type ='file' id = 'uploader' name='UploadFiles'>
+      <ejs-uploader id="Uploader" name="upload" class="form-control" formControlName="upload" [autoUpload] = 'false' (selected) = "onFileSelect($event)"></ejs-uploader>
   </div>
-  <button type="button" class="btn btn-primary" (click)="ResetForm($event)">
-    Reset
-  </button>
   <button type="submit" class="btn btn-primary">
     Submit
   </button>
-
+  <button type="reset" class="btn btn-primary">
+    Reset
+  </button>
 </form>
 
 <div id="details">
